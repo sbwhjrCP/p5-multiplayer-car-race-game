@@ -41,7 +41,7 @@ class Teacher {
   }
 
   getToken(word) {
-    var url = `https://us-central1-trail-car-racing-game.cloudfunctions.net/genrateToken?secret_word=${word}`;
+    var url = `https://us-central1-trial-car-racing-game.cloudfunctions.net/genrateToken?secret_word=${word}`;
     httpGet(url, "json", false, (response) => {
       if (response.success) {
         db.ref(`users/${word}`).update({
